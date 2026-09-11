@@ -1,0 +1,82 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    background-color: #F7F4ED;
+    color: #171717;
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  }
+
+  body {
+    background-color: #F7F4ED;
+    color: #171717;
+    margin: 0;
+    padding: 0;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  /* Paper texture overlay subtle grain */
+  .paper-grain {
+    background-color: #F7F4ED;
+    background-image: radial-gradient(#d8d2c7 0.65px, transparent 0.65px);
+    background-size: 24px 24px;
+  }
+
+  ::selection {
+    background-color: rgba(110, 52, 52, 0.18);
+    color: #171717;
+  }
+}
+
+/* Custom editorial typography utility classes */
+.font-display {
+  font-family: 'Cormorant Garamond', Georgia, serif;
+}
+
+.font-editorial {
+  font-family: 'Cormorant Garamond', 'EB Garamond', Georgia, serif;
+}
+
+.font-sans-meta {
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+}
+
+/* Hairline borders */
+.border-hairline {
+  border-color: #D8D2C7;
+}
+
+/* Custom scrollbar for literary feel */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: #F7F4ED;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #D8D2C7;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #6E3434;
+}
+
+/* Print styling */
+@media print {
+  header, footer, nav, .no-print {
+    display: none !important;
+  }
+  body {
+    background: white !important;
+    color: black !important;
+  }
+}
